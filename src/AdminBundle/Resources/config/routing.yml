@@ -1,6 +1,6 @@
 admin_login:
     path:     /
-    defaults: { _controller: AdminBundle:Main:login }
+    defaults: { _controller: AdminBundle:Security:login }
 
 admin_panel:
     path:     /dashboard
