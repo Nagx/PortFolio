@@ -49,6 +49,13 @@ class Project
      */
     private $solution;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enable", type="boolean")
+     */
+    private $enable;
+
 
     /**
      * Get id
@@ -154,6 +161,22 @@ class Project
     public function getSolution()
     {
         return $this->solution;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnable()
+    {
+        return $this->enable;
+    }
+
+    /**
+     * @param bool $enable
+     */
+    public function setEnable($enable)
+    {
+        $this->enable = $enable;
     }
 }
 
