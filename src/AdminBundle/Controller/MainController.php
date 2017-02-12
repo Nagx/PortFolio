@@ -12,4 +12,9 @@ class MainController extends Controller
         $form = $this->createForm(LoginType::class);
         return $this->render('Admin/pages/login.html.twig', array('form' => $form->createView()));
     }
+
+    public function indexAction()
+    {
+        return $this->render('Admin/pages/index.html.twig');
+    }
 }
