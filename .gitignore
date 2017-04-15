@@ -46,3 +46,8 @@
 
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~
+
+npm-debug.log
+/node_modules
+/app/Resources/front_end/vendors/
+/web/assets/

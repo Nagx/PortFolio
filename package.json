@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "It's a personnal portfolio",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagx/PortFolio.git"
+  },
+  "author": "Kevin Javazzo <k.javazzo.pro@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nagx/PortFolio/issues"
+  },
+  "homepage": "https://github.com/Nagx/PortFolio#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-uglify": "^2.1.2"
+  }
+}
