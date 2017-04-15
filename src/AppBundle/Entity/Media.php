@@ -31,15 +31,21 @@ class Media
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=255)
+     * @ORM\Column(name="original_name", type="string", length=255, unique=true)
      */
-    private $role;
+    private $originalName;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="context", type="string", length=255)
+     */
+    private $context;
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -71,27 +77,50 @@ class Media
     }
 
     /**
-     * Set role
+     * Set originalName
      *
-     * @param string $role
+     * @param string $originalName
      *
      * @return Media
      */
-    public function setRole($role)
+    public function setOriginalName($originalName)
     {
-        $this->role = $role;
+        $this->originalName = $originalName;
 
         return $this;
     }
 
     /**
-     * Get role
+     * Get originalName
      *
      * @return string
      */
-    public function getRole()
+    public function getOriginalName()
     {
-        return $this->role;
+        return $this->originalName;
+    }
+
+    /**
+     * Set context
+     *
+     * @param string $context
+     *
+     * @return Media
+     */
+    public function setContext($context)
+    {
+        $this->context = $context;
+
+        return $this;
+    }
+
+    /**
+     * Get context
+     *
+     * @return string
+     */
+    public function getContext()
+    {
+        return $this->context;
     }
 }
-
