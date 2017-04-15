@@ -2,7 +2,7 @@ parameters:
     git_dir: .
     bin_dir: vendor/bin
     tasks:
-            gulp:
-                task: lint
-            phpunit: ~
-            phpcsfixer2: ~
+        gulp:
+            task: lint
+        phpunit: ~
+        phpcsfixer2: ~
