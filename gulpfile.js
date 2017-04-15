@@ -8,22 +8,12 @@ var sassLint = require('gulp-sass-lint');
 //paths is an object containing all paths of the assets
 var paths = {
     vendorJs: [
-        './app/Resources/front_end/vendors/jquery/dist/jquery.min.js',
-        './app/Resources/front_end/vendors/jquery-ui/jquery-ui.min.js',
-        './app/Resources/front_end/vendors/flatpickr/dist/flatpickr.min.js',
-        './app/Resources/front_end/vendors/flatpickr/dist/l10n/fr.js',
-        './app/Resources/front_end/vendors/bootstrap/dist/js/bootstrap.min.js',
-        './app/Resources/front_end/vendors/afterglow/dist/afterglow.min.js'
     ],
     vendorCss: [
-        './app/Resources/front_end/vendors/jquery-ui/themes/smoothness/jquery-ui.min.css',
-        './app/Resources/front_end/vendors/mdi/css/materialdesignicons.min.css',
-        './app/Resources/front_end/vendors/flatpickr/dist/flatpickr.min.css',
-        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.min.css'
+        './app/Resources/front_end/vendors/font-awesome/css/font-awesome.min.css'
     ],
     fonts: [
-        './app/Resources/front_end/vendors/mdi/fonts/*',
-        './app/Resources/front_end/vendors/bootstrap/dist/fonts/*'
+        './app/Resources/front_end/vendors/font-awesome/fonts/*'
     ],
     js: [
         './app/Resources/front_end/dev/js/*.js'
@@ -41,7 +31,6 @@ var paths = {
         './app/Resources/front_end/dev/sass/img/favicon/*'
     ],
     videos: [
-        './app/Resources/front_end/dev/sass/videos/*'
     ],
     dist: {
         js:         './web/assets/js',
