@@ -49,3 +49,5 @@
 
 npm-debug.log
 /node_modules
+/app/Resources/front_end/vendors/
+/web/assets/
