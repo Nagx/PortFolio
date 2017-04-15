@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Me
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="me")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MeRepository")
  */
-class Me
+class Me implements UserInterface
 {
     /**
      * @var int
@@ -52,43 +53,42 @@ class Me
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="linkedin", type="string", length=255, unique=true)
+     * @ORM\Column(name="linkedin", type="string", length=255, unique=true, nullable=true)
      */
     private $linkedin;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="github", type="string", length=255, unique=true)
+     * @ORM\Column(name="github", type="string", length=255, unique=true, nullable=true)
      */
     private $github;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="twitter", type="string", length=255, unique=true)
+     * @ORM\Column(name="twitter", type="string", length=255, unique=true, nullable=true)
      */
     private $twitter;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="experience", type="text")
+     * @ORM\Column(name="roles", type="string", length=255, unique=true)
      */
-    private $experience;
-
+    private $roles;
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -288,27 +288,58 @@ class Me
     }
 
     /**
-     * Set experience
+     * Set roles
      *
-     * @param string $experience
+     * @param string $roles
      *
      * @return Me
      */
-    public function setExperience($experience)
+    public function setRoles($roles)
     {
-        $this->experience = $experience;
+        $this->roles = $roles;
 
         return $this;
     }
 
     /**
-     * Get experience
+     * Get roles
      *
      * @return string
      */
-    public function getExperience()
+    public function getRoles()
     {
-        return $this->experience;
+        return $this->roles;
+    }
+
+    /**
+     * Returns the salt that was originally used to encode the password.
+     *
+     * This can return null if the password was not encoded using a salt.
+     *
+     * @return string|null The salt
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * Returns the username used to authenticate the user.
+     *
+     * @return string The username
+     */
+    public function getUsername()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials()
+    {
     }
 }
-

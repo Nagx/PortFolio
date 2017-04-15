@@ -1,10 +1,11 @@
 security:
     encoders:
-        AppBundle\Entity\User: bcrypt
+        AppBundle\Entity\User:
+            algorithm: bcrypt
 
     providers:
-        in_memory:
-            memory: ~
+        user:
+            entity: { class: AppBundle\Entity\User, property: email }
 
     firewalls:
         dev:
@@ -16,3 +17,5 @@ security:
             form_login:
                 login_path: admin_login
                 check_path: admin_login
+
+    access_control:
