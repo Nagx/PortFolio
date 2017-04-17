@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class MainController extends Controller
 {
     public function indexAction()
     {
@@ -20,6 +20,6 @@ class DefaultController extends Controller
             ->setRoles('ROLE_ADMIN');
         $em->persist($user);
         $em->flush();*/
-        return $this->render('AppBundle:Default:index.html.twig');
+        return $this->render('main/pages/index.html.twig');
     }
 }
