@@ -8,18 +8,19 @@ var sassLint = require('gulp-sass-lint');
 //paths is an object containing all paths of the assets
 var paths = {
     vendorJs: [
+        './app/Resources/front_end/vendors/jquery/dist/jquery.min.js',
+        './app/Resources/front_end/vendors/bootstrap/dist/js/bootstrap.min.js'
     ],
     vendorCss: [
         './app/Resources/front_end/vendors/font-awesome/css/font-awesome.min.css',
-        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.css'
+        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.min.css'
     ],
     fonts: [
         './app/Resources/front_end/vendors/font-awesome/fonts/*',
         './app/Resources/front_end/vendors/bootstrap/dist/fonts/*'
     ],
     js: [
-        './app/Resources/front_end/dev/js/*.js',
-        './app/Resources/front_end/vendors/bootstrap/dist/js/*.js'
+        './app/Resources/front_end/dev/js/*.js'
     ],
     sass: [
         './app/Resources/front_end/dev/sass/**/*.sass',
