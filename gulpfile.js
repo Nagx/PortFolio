@@ -13,7 +13,7 @@ var paths = {
     ],
     vendorCss: [
         './app/Resources/front_end/vendors/font-awesome/css/font-awesome.min.css',
-        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.min.css'
+        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.min.css',
     ],
     fonts: [
         './app/Resources/front_end/vendors/font-awesome/fonts/*',
