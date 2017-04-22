@@ -10,13 +10,16 @@ var paths = {
     vendorJs: [
     ],
     vendorCss: [
-        './app/Resources/front_end/vendors/font-awesome/css/font-awesome.min.css'
+        './app/Resources/front_end/vendors/font-awesome/css/font-awesome.min.css',
+        './app/Resources/front_end/vendors/bootstrap/dist/css/bootstrap.css'
     ],
     fonts: [
-        './app/Resources/front_end/vendors/font-awesome/fonts/*'
+        './app/Resources/front_end/vendors/font-awesome/fonts/*',
+        './app/Resources/front_end/vendors/bootstrap/dist/fonts/*'
     ],
     js: [
-        './app/Resources/front_end/dev/js/*.js'
+        './app/Resources/front_end/dev/js/*.js',
+        './app/Resources/front_end/vendors/bootstrap/dist/js/*.js'
     ],
     sass: [
         './app/Resources/front_end/dev/sass/**/*.sass',
