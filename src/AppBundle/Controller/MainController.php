@@ -22,4 +22,14 @@ class MainController extends Controller
         $em->flush();*/
         return $this->render('main/pages/index.html.twig');
     }
+
+    public function legalesAction()
+    {
+        return $this->render('main/pages/legales.html.twig');
+    }
+
+    public function planAction()
+    {
+        return $this->render('main/pages/plan.html.twig');
+    }
 }

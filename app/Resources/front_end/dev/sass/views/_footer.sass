@@ -1,0 +1,29 @@
+@import 'imports'
+
+footer
+  align-items: center
+  background-color: $dark-back
+  color: $white
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: 0 auto
+  .footer-social
+    padding: 10px
+    a
+      margin: 5px
+  .copyright
+    font-size: $very-small
+    font-weight: bold
+    padding: 10px
+    text-align: center
+    width: 100%
+    a
+      color: $white-copyright
+      outline: none
+      transition: .4s
+      &:hover,
+      &:focus
+        color: $blue-light
+        outline: none
+        text-decoration: none

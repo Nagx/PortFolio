@@ -1,6 +1,7 @@
 @import 'imports'
 
 header
+  border-top: 4px solid $blue-light
   .banner
     align-items: center
     background: url('../img/header_banner.png') no-repeat
@@ -12,14 +13,17 @@ header
     overflow: hidden
     width: auto
     .bannerText
+      background-color: $dark-back-trans
+      border: solid 2px $blue-light
       color: $white
       font-family: $logo-font
-      max-width: 300px
-      padding: 15px
+      max-width: 400px
+      padding: 20px
       text-align: center
-      width: 95%
+      width: 93%
       img
         height: auto
+        max-width: 220px
         width: 80%
       h1, h2
         line-height: 20%

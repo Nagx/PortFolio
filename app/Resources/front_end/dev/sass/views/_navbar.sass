@@ -1,6 +1,8 @@
 @import 'imports'
 
 .navbar
+  background-color: $dark-back
+  border: none
   border-radius: inherit
   a,
   .linkOut
@@ -9,9 +11,13 @@
     font-weight: bold
     outline: none
     text-align: center
-  .linkOut,
-  &:hover
+    transition: .4s
+    &:hover
+      color: $blue-light !important
+  .linkOut
     color: $linkOut !important
+    &:hover
+      color: $linkOut !important
 
 .nav-logo
   height: 50px

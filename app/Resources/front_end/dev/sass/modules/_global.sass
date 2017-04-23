@@ -7,6 +7,22 @@
 .noPadd
   padding: 0
 
+.content-size
+  width: 70%
+  @media screen and (max-width: $medium-desktop)
+    width: 80%
+  @media screen and (max-width: $tablet)
+    width: 100%
+
+.link
+  color: $white
+  transition: .4s
+  &:hover,
+  &:focus
+    color: $blue-light
+    outline: none
+    text-decoration: none
+
 h1
   text-transform: uppercase
 
