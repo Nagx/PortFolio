@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
         <title>JK Portfolio - {% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link type='text/css' href='{{ asset('assets/css/vendor.css') }}' rel='stylesheet' media='screen'/>
+        <link type='text/css' href='{{ asset('assets/css/app.css') }}' rel='stylesheet' media='screen'/>
     </head>
     <body>
-    {% include'main/template/header.html.twig' %}
+        <header>
+            {% block header %}{% endblock %}
+            {% include 'main/template/navbar.html.twig' %}
+        </header>
         {% block body %}{% endblock %}
-    {% include'main/template/footer.html.twig' %}
+        {% include'main/template/footer.html.twig' %}
+        <script src="{{ asset('assets/js/vendor.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
